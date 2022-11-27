@@ -42,17 +42,11 @@ def edit_contact_name(contact_list):
                 temp = s.split(' ')
                 el.insert(1, temp[1])
                 el.insert(1, temp[0])
-                # if len(temp) <= 2:
-                #     del el[0]
-                #     break
                 del el[3]
             elif (re.findall(r'([А-ЯЁ][а-яё]+\s*){2}', s)) and el.index(s) == 0:
                 temp = s.split(' ')
                 el.insert(0, temp[1])
                 el.insert(0, temp[0])
-                # if len(temp) <= 2:
-                #     del el[0]
-                #     break
                 del el[2]   
 
 def _get_duplicates_indices(contact_list):
